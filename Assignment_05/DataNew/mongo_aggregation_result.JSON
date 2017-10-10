@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "59dcca4ab36d3a0cb105f47c",
+        "ID": 20,
+        "Institute": "Caron Foundation",
+        "Street": "244 East 58th Street, New York, NY",
+        "Days": "Tuesdays",
+        "Starting_Hour": "5:30",
+        "End_Hour": "6:30",
+        "TimeSlot": "PM",
+        "Type": "BB = Big Book",
+        "Lat": 40.7479666,
+        "Long": -73.9818762,
+        "Details": ""
+    },
+    {
+        "_id": "59dcca4ab36d3a0cb105f481",
+        "ID": 25,
+        "Institute": "The Caron Foundation",
+        "Street": "244 East 58th Street, New York, NY",
+        "Days": "Tuesdays",
+        "Starting_Hour": "6:45",
+        "End_Hour": "7:45",
+        "TimeSlot": "PM",
+        "Type": "OD = Open Discussion",
+        "Lat": 40.748323,
+        "Long": -73.97884499999999,
+        "Details": ""
+    }
+]
