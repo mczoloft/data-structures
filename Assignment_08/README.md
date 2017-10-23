@@ -12,8 +12,9 @@ We have data streaming from 2 sensors: a photosensor and a knob. They are placed
 
 Here's a visual scheme for a possible visualization of the data:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
+![alt text](https://raw.githubusercontent.com/mczoloft/data-structures/master/Assignment_08/LayoutSensors.png)
 
+And here's the code for creating the DB in my SQL repository:
 
     psql (9.3.18, server 9.6.2)
     WARNING: psql major version 9.3, server major version 9.6.
