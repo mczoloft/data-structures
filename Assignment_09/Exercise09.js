@@ -30,7 +30,7 @@ var getAndWriteData = function() {
         client.connect();
 
         // // Construct a SQL statement to insert sensor values into a table
-        var thisQuery = "INSERT INTO studyRoom VALUES (" + workMood + "," + "DEFAULT, " + workLight + ");";
+        var thisQuery = "INSERT INTO studyRoom VALUES (" + workMood + "," + "DEFAULT" + workLight + ");";
         console.log(thisQuery); // for debugging
 
         // // Connect to the AWS RDS Postgres database and insert a new row of sensor values
