@@ -1,0 +1,30 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "package for data structures files",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.5.0",
+    "cheerio": "^1.0.0-rc.2",
+    "d2": "^28.0.0",
+    "d3": "^4.10.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.31",
+    "pg": "^7.3.0",
+    "request": "^2.82.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mczoloft/data-structures.git"
+  },
+  "author": "flavio pessoa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mczoloft/data-structures/issues"
+  },
+  "homepage": "https://github.com/mczoloft/data-structures#readme"
+}
