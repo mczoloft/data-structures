@@ -1,6 +1,8 @@
 var express = require('express'),
     app = express();
 const { Pool } = require('pg');
+var config = require('../../sensitive_data/config');
+
 
 // AWS RDS POSTGRESQL INSTANCE
 var db_credentials = new Object();
