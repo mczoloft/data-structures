@@ -25,8 +25,8 @@ app.get('/', function(req, res) {
              min(workMood) as min_work,
              max(workLight) as max_light, 
              min(workLight) as min_light
-             FROM sensorfp 
-             GROUP BY sensormonth, sensorday, sensorhour;`;
+             FROM studyroom 
+             GROUP BY sensorday, sensorhour;`;
              
     client.connect();
     client.query(q, (qerr, qres) => {
