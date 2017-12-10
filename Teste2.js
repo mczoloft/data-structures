@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var meetings = JSON.parse(fs.readFileSync('https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment01/aaData.txt'));
+var meetings = JSON.parse(fs.readFileSync('https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment01/aaData.json'));
 
 // Connection URL
 // var url = 'mongodb://' + process.env.IP + ':27017/aa';
