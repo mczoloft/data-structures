@@ -6,16 +6,19 @@ var meetings = JSON.parse(fs.readFileSync('FinalAssignment01/aaData.json'));
 // var url = 'mongodb://' + process.env.IP + ':27017/aa';
 var url = process.env.ATLAS;
 
+console.log(url);
+
 // Retrieve
-var MongoClient = require('mongodb').MongoClient; // npm install mongodb
+// var MongoClient = require('mongodb').MongoClient; // npm install mongodb
 
-MongoClient.connect(url, function(err, db) {
-    if (err) {return console.dir(err);}
+// MongoClient.connect(url, function(err, db) {
+//     if (err) {return console.dir(err);}
 
-    var collection = db.collection('meetings');
+//     var collection = db.collection('meetings');
 
-    // THIS IS WHERE THE DOCUMENT(S) IS/ARE INSERTED TO MONGO:
-    collection.insert(meetings);
-    db.close();
+//     // THIS IS WHERE THE DOCUMENT(S) IS/ARE INSERTED TO MONGO:
+//     collection.insert(meetings);
+//     db.close();
 
-}); //MongoClient.connect
+// }); 
+//MongoClient.connect
