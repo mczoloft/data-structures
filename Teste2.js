@@ -2,7 +2,7 @@ var fs = require('fs');
 var config = require('../sensitive_data/config.js');
 
 //credentials stored securely
-var db_credentials = config.atlas;
+var db_credentials = 'mongodb://' + 'cluster0-shard-00-00-rzdcl.mongodb.net:27017' + 'flavio';
 
 var meetings = JSON.parse(fs.readFileSync('FinalAssignment01/aaData.json'));
 
