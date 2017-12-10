@@ -2,7 +2,7 @@ var request = require('request');
 
 var collName = 'reunioesAA';
 
-request('FinalAssignment01/aaData.json', function(error, response, body) {
+request('https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment01/aaData.json', function(error, response, body) {
     var meetingData = JSON.parse(body);
 
     var url = 'mongo "mongodb://cluster0-shard-00-00-rzdcl.mongodb.net:27017,cluster0-shard-00-01-rzdcl.mongodb.net:27017,cluster0-shard-00-02-rzdcl.mongodb.net:27017/flavio?replicaSet=Cluster0-shard-0" --authenticationDatabase admin --ssl --username santf655 --password KRN5vzHGr2OkQfGh';
