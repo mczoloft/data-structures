@@ -87,7 +87,7 @@ $(ROWS).each(function (i, elem) {
 
 function write() {
  console.log(encontros);
-fs.writeFile('/home/ubuntu/workspace/FinalAssignment01/aaData.txt', JSON.stringify(encontros));
+fs.writeFile('/home/ubuntu/workspace/FinalAssignment01/aaData.json', JSON.stringify(encontros));
          }
 
 write();
