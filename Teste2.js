@@ -17,7 +17,7 @@ var MongoClient = require('mongodb').MongoClient; // npm install mongodb
 MongoClient.connect(db_credentials, function(err, db) {
     if (err) {return console.dir(err);}
 
-    var collection = db.collection('meetings');
+    var collection = db.collection('flavio');
 
     // THIS IS WHERE THE DOCUMENT(S) IS/ARE INSERTED TO MONGO:
     collection.insert(meetings);
