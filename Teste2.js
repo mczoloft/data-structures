@@ -1,5 +1,5 @@
 var fs = require('fs');
-var config = require('../../sensitive_data/config');
+var config = require('../sensitive_data/config');
 
 //credentials stored securely
 var db_credentials = new Object();
