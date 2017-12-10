@@ -59,8 +59,6 @@ $(Txt1st).each(function (i, elem) {
     Teste6.push(TypeEncounter.text().trim());
 });
 
-
-
 var Meetings = [];
 
 //eachSeries in the async module iterates over an array and operates on each item in the array in series
