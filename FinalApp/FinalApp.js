@@ -47,6 +47,7 @@ app.get('/', function(req, res) {
     client.end();
 });
 
+console.log(url);
 
 app.get('/aa', function(req, res) {
 
