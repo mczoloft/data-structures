@@ -15,7 +15,7 @@ db_credentials.port = 5432;
 
 //Mongo Variables
 var MongoClient = require('mongodb').MongoClient;
-var collName = 'meetings';
+var collName = 'flavio';
 var url = config.atlas;
 
 // HTML wrappers for AA data
