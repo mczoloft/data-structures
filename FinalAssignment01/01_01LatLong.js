@@ -5,13 +5,14 @@ var async = require('async');
 
 var apiKey = 'AIzaSyANzKhcTdGs6tXK6fmWYRR4_0hOH7B18J0';
 
-request('aaData.json', function(error, response, body) {
+request('https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment01/aaData.json', function(error, response, body) {
     var meetingswithoutlatLong = JSON.parse(body);
 
   var meetingsData = [];
   async.eachSeries(meetingswithoutlatLong, function(value, callback) {
-    var apiRequest = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + value.RuaFormatada.split(' ').join('+') + '&key=AIzaSyANzKhcTdGs6tXK6fmWYRR4_0hOH7B18J0';
+    var apiRequest = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + value.RuaFormatada.split(' ').join('+') + '&key=AIzaSyCD2HC6LL2Kjru7kUaUpNLJQ4x2xZBwXtk';
     var thisMeeting = new Object;
+    // console.log(apiRequest);
     thisMeeting = value;
     request(apiRequest, function(err, resp, body) {
       if (err) {throw err;}
