@@ -19,8 +19,8 @@ var collName = 'meetings';
 var url = config.atlas;
 
 // HTML wrappers for AA data
-var partOne = fs.readFileSync("data-structures/finalApp/index1.txt");
-var partTwo = fs.readFileSync("data-structures/finalApp/index2.txt");
+var partOne = fs.readFileSync("index1.txt");
+var partTwo = fs.readFileSync("index2.txt");
 
 
 app.get('/', function(req, res) {
@@ -56,13 +56,13 @@ app.get('/aa', function(req, res) {
         var Hoje = atual.tz(new Date(), "America/New_York").days();
         var DiaHoje;
         var DiaAmanha;
-        if (Hoje == 0) {DiaHoje = '<b>Sundays'; DiaAmanha = '<b>Monday'}
-        else if (Hoje == 1) {DiaHoje = '<b>Mondays'; DiaAmanha = '<b>Tuesdays'}
-        else if (Hoje == 2) {DiaHoje = '<b>Tuesdays'; DiaAmanha = '<b>Wednesdays'}
-        else if (Hoje == 3) {DiaHoje = '<b>Wednesdays'; DiaAmanha = '<b>Thursdays'}
-        else if (Hoje == 4) {DiaHoje = '<b>Thursdays'; DiaAmanha = '<b>Fridays'}
-        else if (Hoje == 5) {DiaHoje = '<b>Fridays'; DiaAmanha = '<b>Saturdays'}
-        else if (Hoje == 6) {DiaHoje = '<b>Saturdays'; DiaAmanha = '<b>Sundays'}
+        if (Hoje == 0) {DiaHoje = 'Sunday'; DiaAmanha = 'Monday'}
+        else if (Hoje == 1) {DiaHoje = 'Monday'; DiaAmanha = 'Tuesday'}
+        else if (Hoje == 2) {DiaHoje = 'Tuesday'; DiaAmanha = 'Wednesday'}
+        else if (Hoje == 3) {DiaHoje = 'Wednesday'; DiaAmanha = 'Thursday'}
+        else if (Hoje == 4) {DiaHoje = 'Thursday'; DiaAmanha = 'Friday'}
+        else if (Hoje == 5) {DiaHoje = 'Friday'; DiaAmanha = 'Saturday'}
+        else if (Hoje == 6) {DiaHoje = 'Saturday'; DiaAmanha = 'Sunday'}
         
         var HoraAtual = atual.tz(new Date(), "America/New_York").hours();
         var HoraFinal = 6;
@@ -84,8 +84,7 @@ app.get('/aa', function(req, res) {
             
             // group by meeting group
             { $group : { _id : {
-                lat: "$Lat",
-                long: "$Long",
+                latLong: "$latLong",
                 meetingName : "$NomeReuniaoInteiro",
                 meetingAddress : "$RuaFormatada",
                 meetingDetails : "$Detalhes",
@@ -99,8 +98,7 @@ app.get('/aa', function(req, res) {
             // group meeting groups by latLong
             {
                 $group : { _id : { 
-                    lat : "$_id.lat",
-                    long : "$_id.long"},
+                    latLong : "$_id.latLong"},
                     meetingGroups : { $push : {groupInfo : "$_id", meetingDay : "$Dia", meetingStartTime : "$horaInicial", meetingType : "$TipoReuniao" }}
                 }
             }
