@@ -1,7 +1,7 @@
 var fs = require('fs');
 var config = require('../../sensitive_data/config');
 
-var meetings = JSON.parse(fs.readFileSync('LatLong.json'));
+var data = JSON.parse(fs.readFileSync('FinalAssignment01/LatLong.json'));
 
 // Connection URL
 var url = config.atlas;
@@ -15,7 +15,7 @@ MongoClient.connect(url, function(err, db) {
     var collection = db.collection('flavio');
 
     // THIS IS WHERE THE DOCUMENT(S) IS/ARE INSERTED TO MONGO:
-    collection.insert(meetings);
+    collection.insert(data);
     db.close();
 
 }); //MongoClient.connect

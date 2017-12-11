@@ -21,7 +21,7 @@ request('https://raw.githubusercontent.com/mczoloft/data-structures/master/Final
     });
     setTimeout(callback, 250);
     }, function() {
-      require('fs').writeFile('LatLong.json', JSON.stringify(meetingsData), function (err) {
+      require('fs').writeFile('FinalAssignment01/LatLong.json', JSON.stringify(meetingsData), function (err) {
         if (err) {
           console.error('error');
         }
