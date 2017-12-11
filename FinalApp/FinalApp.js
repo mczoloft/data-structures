@@ -88,10 +88,12 @@ app.get('/aa', function(req, res) {
                 latLong: "$latLong",
                 meetingName : "$NomeReuniaoInteiro",
                 meetingAddress : "$RuaFormatada",
-                meetingDetails : "$Detalhes",
                 },
                     meetingDay : { $push : "$Dia" },
                     meetingStartTime : { $push : "$horaInicial" }, 
+                    meetingStartPeriod : { $push : "$PeriodoInicial" }, 
+                    meetingEndTime : { $push : "$horaFinal" },
+                    meetingEndPeriod : { $push : "$PeriodoFinal" }, 
                     meetingType : { $push : "$TipoReuniao" }
             }
             },
@@ -100,7 +102,7 @@ app.get('/aa', function(req, res) {
             {
                 $group : { _id : { 
                     latLong : "$_id.latLong"},
-                    meetingGroups : { $push : {groupInfo : "$_id", meetingDay : "$Dia", meetingStartTime : "$horaInicial", meetingType : "$TipoReuniao" }}
+                    meetingGroups : { $push : {groupInfo : "$_id", meetingDay : "$meetingDay", meetingStartTime : "$meetingStartTime", meetingStartPeriod : "$meetingStartPeriod", meetingStartTime : "$meetingEndTime", meetingEndPeriod : "$meetingEndPeriod", meetingType : "$meetingType" }}
                 }
             }
 
