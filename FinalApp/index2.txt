@@ -6,7 +6,7 @@
                 '</div>';
             for (var i = 0; i < cont.meetingGroups.length; i++) {
             if (i == 0) {
-                contentHolder = contentHolder + '<h2>' + cont.meetingGroups[i].groupInfo.meetingAddress1.substr(0, cont.meetingGroups[i].groupInfo.meetingAddress1.indexOf(',')) + '</h2>';
+                contentHolder = contentHolder + '<h2>' + cont.meetingGroups[i].groupInfo.meetingAddress + '</h2>';
             } 
                 contentHolder = contentHolder + '<h1 id="firstHeading" class="firstHeading">';
                 contentHolder = contentHolder + cont.meetingGroups[i].groupInfo.meetingName + '</h1>';
