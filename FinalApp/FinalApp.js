@@ -102,7 +102,7 @@ app.get('/aa', function(req, res) {
             {
                 $group : { _id : { 
                     latLong : "$_id.latLong"},
-                    meetingGroups : { $push : {groupInfo : "$_id", meetingDay : "$meetingDay", meetingStartTime : "$meetingStartTime", meetingStartPeriod : "$meetingStartPeriod", meetingStartTime : "$meetingEndTime", meetingEndPeriod : "$meetingEndPeriod", meetingType : "$meetingType" }}
+                    meetingGroups : { $push : {groupInfo : "$_id", meetingDay : "$meetingDay", meetingStartTime : "$meetingStartTime", meetingStartPeriod : "$meetingStartPeriod", meetingEndTime : "$meetingEndTime", meetingEndPeriod : "$meetingEndPeriod", meetingType : "$meetingType" }}
                 }
             }
 
