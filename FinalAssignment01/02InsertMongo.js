@@ -1,7 +1,7 @@
 var fs = require('fs');
 var config = require('../../sensitive_data/config');
 
-var data = JSON.parse(fs.readFileSync('FinalAssignment01/LatLong.json'));
+var data = JSON.parse(fs.readFileSync('LatLong.json'));
 
 // Connection URL
 var url = config.atlas;
