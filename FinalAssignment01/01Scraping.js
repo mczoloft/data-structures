@@ -36,7 +36,7 @@ $(ROWS).each(function (i, elem) {
         Reunioes.NomeReuniaoPrincipal = $(FrstCell).find('b').text().substring(0, ($(FrstCell).find('b').text()).indexOf('-')-1).replace('E', 'East').replace('\'s', " s").toUpperCase().trim();
         Reunioes.NomeReuniaoInteiro = $(FrstCell).find('b').text().replace('\'s', " s").toUpperCase().trim();
         Reunioes.RuaFormatada = RuaLimpa;
-        Reunioes.Dia = HRS[0];
+        Reunioes.Dia = HRS[0].substring(0, HRS[0].length-1).replace('<b>', '');
         Reunioes.horaInicial = HRS[3];
         Reunioes.horaInicialHoraNUM = +(HRS[3].substring(0,Reunioes.horaInicial.indexOf(':',0)));
         Reunioes.horaInicialMinNUM = +(HRS[3].substring(Reunioes.horaInicial.indexOf(':',0)+1,Reunioes.horaInicial.length));
@@ -58,8 +58,6 @@ $(ROWS).each(function (i, elem) {
             Reunioes.TipoReuniao = TimeData.substring(TimeData.indexOf('=', 0)-2, TimeData.indexOf('meeting')+7);
         Reunioes.TipoReuniaoDummy = Reunioes.TipoReuniao.substring(0, Reunioes.TipoReuniao.indexOf('=')-1);
         Reunioes.Detalhes =  $(FrstCell).find('div.detailsBox').text().trim();
-        Reunioes.Lat =  40.7483346;
-        Reunioes.Long = -73.97882589999999;
         
         encontros.push(Reunioes);
         // console.log(Reunioes.RuaFormatada);
