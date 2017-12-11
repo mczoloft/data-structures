@@ -5,7 +5,7 @@ var collName = 'reunioesAA';
 request('https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment01/aaData.json', function(error, response, body) {
     var meetingData = JSON.parse(body);
 
-    var url = 'mongo "mongodb://cluster0-shard-00-00-rzdcl.mongodb.net:27017,cluster0-shard-00-01-rzdcl.mongodb.net:27017,cluster0-shard-00-02-rzdcl.mongodb.net:27017/flavio?replicaSet=Cluster0-shard-0" --authenticationDatabase admin --ssl --username santf655 --password KRN5vzHGr2OkQfGh';
+    var url = 'mongodb://santf655:KRN5vzHGr2OkQfGh@cluster0-shard-00-00-rzdcl.mongodb.net:27017,cluster0-shard-00-01-rzdcl.mongodb.net:27017,cluster0-shard-00-02-rzdcl.mongodb.net:27017/flavio?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin';
     
     // Retrieve
     var MongoClient = require('mongodb').MongoClient;
