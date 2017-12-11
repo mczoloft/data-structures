@@ -64,7 +64,6 @@
                 var marker = new google.maps.Marker({
                     position: myLatLng,
                     map: map,
-                    icon: 'http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png',
                     title: "Click for meeting info",
                     content: contentWindow,
                 });
