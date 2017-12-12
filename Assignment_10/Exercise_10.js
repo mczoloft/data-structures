@@ -12,7 +12,7 @@ db_credentials.database = 'sensorfp';
 db_credentials.password = config.AWSRDS_PW;
 db_credentials.port = 5432;
 
-app.get('/', function(req, res) {
+app.get('/v2', function(req, res) {
     // Connect to the AWS RDS Postgres database
     const client = new Pool(db_credentials);
 
@@ -36,6 +36,6 @@ app.get('/', function(req, res) {
     client.end();
 });
 
-app.listen(6000, function() {
+app.listen(3000, function() {
     console.log('Server listening...');
 });
