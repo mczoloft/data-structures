@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
              max(workLight) as max_light, 
              min(workLight) as min_light
              FROM studyRoom 
-             GROUP BY realTime, sensorday, sensormonth, sensorhour;`;
+             GROUP BY sensorday, sensormonth, sensorhour;`;
              
     client.connect();
     client.query(q, (qerr, qres) => {
