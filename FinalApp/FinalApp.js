@@ -33,9 +33,7 @@ app.get('/', function(req, res) {
              EXTRACT(HOUR FROM realTime AT TIME ZONE 'America/New_York') as sensorhour,
              EXTRACT(MINUTE FROM realTime AT TIME ZONE 'America/New_York') as sensorminute,
              count(*) as num_obs, 
-             avg(workMood) as mean_work, 
              max(workMood) as max_work,
-             avg(workLight) as avg_light, 
              max(workLight) as max_light
              FROM studyRoom 
              GROUP BY realTime, sensorday, sensormonth, sensorhour, sensorminute;`;
