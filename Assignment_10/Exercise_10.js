@@ -36,6 +36,6 @@ app.get('/v2', function(req, res) {
     client.end();
 });
 
-app.listen(3000, function() {
+app.listen(6000, function() {
     console.log('Server listening...');
 });
