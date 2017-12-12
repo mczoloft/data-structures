@@ -31,11 +31,8 @@ app.get('/', function(req, res) {
     var q = `SELECT EXTRACT(DAY FROM realTime AT TIME ZONE 'America/New_York') as sensorday, 
              EXTRACT(MONTH FROM realTime AT TIME ZONE 'America/New_York') as sensormonth,
              EXTRACT(HOUR FROM realTime AT TIME ZONE 'America/New_York') as sensorhour,
-             count(*) as num_obs, 
-             max(workMood) as max_work, 
-             min(workMood) as min_work,
-             max(workLight) as max_light, 
-             min(workLight) as min_light
+             workMood as work,
+             workLight as light
              FROM studyRoom 
              GROUP BY sensorday, sensormonth, sensorhour;`;
              
