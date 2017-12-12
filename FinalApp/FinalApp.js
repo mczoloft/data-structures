@@ -34,7 +34,7 @@ app.get('/', function(req, res) {
              workMood as work,
              workLight as light
              FROM studyRoom 
-             GROUP BY sensorday, sensormonth, sensorhour;`;
+             GROUP BY realTime, sensorday, sensormonth, sensorhour;`;
              
     client.connect();
     client.query(q, (qerr, qres) => {
