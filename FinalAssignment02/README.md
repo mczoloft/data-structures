@@ -7,7 +7,7 @@ This is what I wrote on week 08, thinking about this assignment:
 
 And this was a visual scheme for a possible visualization of the data:
 
-![alt text](https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment02/ScreenSensorsV2.jpg)
+![alt text(https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment02/ScreenSensorsV2.jpg)]
 
 ## Iterations, expectations and dealing with data
 
@@ -18,7 +18,7 @@ A final review for this project revealed to be a good opportunity to check on so
 
 Instead of treating these faults as bugs, this provided a chance to put the data harvesting process on display as well. Bugs could become features; and data visualization features, by design, should bring insight. What could we learn?
 
-![alt text](https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment02/ScreenSensorsFinal.jpg)
+![alt text(https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment02/ScreenSensorsFinal.jpg)]
 
 I've decided to encode the unreliable data from both sensors with colors. There were also missing data sometimes, and I've chose color to deal with it as well.
 
