@@ -3,7 +3,7 @@ var request = require('request');
 var cheerio = require('cheerio');
 var async = require('async');
 
-var apiKey = 'AIzaSyANzKhcTdGs6tXK6fmWYRR4_0hOH7B18J0';
+var apiKey = ENV.pswd;
 
 request('https://raw.githubusercontent.com/mczoloft/data-structures/master/FinalAssignment01/aaData.json', function(error, response, body) {
     var meetingswithoutlatLong = JSON.parse(body);
